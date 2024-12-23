@@ -1,0 +1,33 @@
+{
+  "name": "kit-plugin",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "description": "The base plugin for creating plugins for the Kit framework.",
+  "keywords": [
+    "multiplayer",
+    "single-player",
+    "kit",
+    "kit-plugin",
+    "plugin"
+  ],
+  "scripts": {
+    "test": "bun test ./tests",
+    "build-types": "bun tsc",
+    "build-dist": "bun bun-build.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EvitcaStudio/KitPlugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EvitcaStudio/KitPlugin/issues"
+  },
+  "homepage": "https://github.com/EvitcaStudio/KitPlugin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "chalk": "^5.4.1",
+    "typescript": "^5.7.2"
+  }
+}

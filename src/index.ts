@@ -1,0 +1,1 @@
+export { KitPlugin } from './kit-plugin';
