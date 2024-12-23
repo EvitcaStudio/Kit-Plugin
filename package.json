@@ -1,5 +1,5 @@
 {
-  "name": "kit-plugin",
+  "name": "@evitcastudio/kit-plugin",
   "version": "1.0.0",
   "module": "src/index.ts",
   "type": "module",
