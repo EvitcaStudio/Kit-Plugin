@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/EvitcaStudio/KitPlugin.git"
+    "url": "git+https://github.com/EvitcaStudio/KitPlugin.git"
   },
   "bugs": {
     "url": "https://github.com/EvitcaStudio/KitPlugin/issues"
@@ -30,6 +30,11 @@
   "devDependencies": {
     "@types/bun": "latest",
     "chalk": "^5.4.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "bun-types": "^1.1.37",
+    "undici-types": "^5.26.5"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
