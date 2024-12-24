@@ -1,6 +1,12 @@
 export class KitPlugin {
+    /**
+     * The name of this plugin.
+     */
     name: string = '';
-    emitter: /*EventEmitter*/ any;
+    /**
+     * The emitter that belongs to this plugin.
+     */
+    private emitter: /*EventEmitter*/ any;
 
     /**
      * Registers the plugin.
