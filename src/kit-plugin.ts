@@ -1,26 +1,26 @@
 export class KitPlugin {
-    name: string = 'UnnamedPlugin';
+    name: string = '';
     emitter: /*EventEmitter*/ any;
 
     /**
      * Registers the plugin.
      */
-    async register() {
-        if (!this.name || typeof this.name !== 'string') {
-            throw new Error(`[Kit Plugin] plugin must have a valid name.`);
+    _register(pEmitter: /*EventEmitter*/ any) {
+        if (!this.name || typeof this.name !== 'string' || !/^[a-zA-Z0-9-_]+$/.test(this.name)) {
+            throw new Error(`[Kit Plugin] Invalid plugin name: '${this.name}'. The name must be a non-empty string containing only alphanumeric characters, dashes, or underscores.`);
         }
-
-        if (!/^[a-zA-Z0-9-_]+$/.test(this.name)) {
-            throw new Error(`Plugin name '${this.name}' contains invalid characters. Only alphanumeric, dashes, and underscores are allowed.`);
-        }
+        this.emitter = pEmitter;
+        this.onRegistered();
     }
 
     /**
-     * Called when the plugin is registered.
-     * @param pEmitter - The event emitter.
+     * This method is meant to be implemented by the subclass.
+     * It serves as an entry point for custom behavior after registration.
+     * The parent class doesn't define any logic for this method.
      */
-    onRegistered(pEmitter: /*EventEmitter*/ any) {
-        this.emitter = pEmitter;
+    protected onRegistered(): void {
+        // No-op in the parent class.
+        // Subclasses can override this to add their own behavior.
     }
 
     /**
