@@ -2,8 +2,9 @@
   "name": "@evitcastudio/kit-plugin",
   "version": "1.0.1",
   "author": "doubleactii 56242467+doubleactii@users.noreply.github.com (https://evitcastudio.com)",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "module": "lib/index.js",
   "type": "module",
   "description": "The base plugin for creating plugins for the Kit framework.",
   "keywords": [
@@ -16,8 +17,9 @@
   "scripts": {
     "test": "bun test ./tests",
     "build-types": "bun tsc",
+    "build-dist": "bun bun-build.ts",
     "build-docs": "bun typedoc",
-    "build-dist": "bun bun-build.ts"
+    "build-all": "bun run build-types && bun run build-dist && bun run build-docs"
   },
   "repository": {
     "type": "git",
