@@ -2,11 +2,12 @@ export declare abstract class KitPlugin {
     /**
      * The name of this plugin.
      */
-    abstract name: string;
+    name: string;
     /**
      * The emitter that belongs to this plugin.
      */
     private emitter;
+    protected constructor();
     /**
      * Registers the plugin.
      */
