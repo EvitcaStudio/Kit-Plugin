@@ -1,4 +1,4 @@
-export declare class KitPlugin {
+export declare abstract class KitPlugin {
     /**
      * The name of this plugin.
      */
@@ -7,16 +7,15 @@ export declare class KitPlugin {
      * The emitter that belongs to this plugin.
      */
     private emitter;
+    constructor();
     /**
      * Registers the plugin.
      */
     _register(pEmitter: any): void;
     /**
-     * This method is meant to be implemented by the subclass.
-     * It serves as an entry point for custom behavior after registration.
-     * The parent class doesn't define any logic for this method.
+     * The entry point for custom behavior after registration for custom plugins.
      */
-    protected onRegistered(): void;
+    abstract onRegistered(): void;
     /**
      * Emit an event.
      * @param pEvent - The event to emit.
