@@ -6,8 +6,8 @@ export declare abstract class KitPlugin {
     /**
      * The emitter that belongs to this plugin.
      */
-    private emitter;
-    protected constructor();
+    protected _emitter: any;
+    constructor();
     /**
      * Registers the plugin.
      */
