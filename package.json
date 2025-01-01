@@ -15,12 +15,12 @@
     "plugin"
   ],
   "scripts": {
-    "prepublishOnly": "bun run build-all",
+    "prepublishOnly": "bun run build-types && bun run build",
     "test": "bun test ./tests",
     "build-types": "bun tsc",
-    "build-dist": "bun bun-build.ts",
+    "build": "bun bun-build.ts",
     "build-docs": "bun typedoc",
-    "build-all": "bun run build-types && bun run build-dist && bun run build-docs"
+    "build-all": "bun run build-types && bun run build && bun run build-docs"
   },
   "repository": {
     "type": "git",
