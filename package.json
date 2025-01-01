@@ -17,6 +17,8 @@
   "scripts": {
     "prepublishOnly": "bun run build-types && bun run build",
     "test": "bun test ./tests",
+    "lint": "bun eslint ./src",
+    "pack": "bun pm pack --dry-run",
     "build-types": "bun tsc",
     "build": "bun bun-build.ts",
     "build-docs": "bun typedoc",
@@ -32,14 +34,21 @@
   "homepage": "https://github.com/EvitcaStudio/KitPlugin",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@types/bun": "latest",
     "bun-types": "^1.1.37",
     "chalk": "^5.4.1",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
     "typedoc": "^0.27.5",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0",
     "undici-types": "^5.26.5"
   },
   "directories": {
     "test": "tests"
-  }
+  },
+  "files": [
+    "/lib"
+  ]
 }
